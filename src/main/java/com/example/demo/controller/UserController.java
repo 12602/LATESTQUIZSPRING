@@ -19,7 +19,7 @@ import com.example.demo.entity.UserQuiz;
 import com.example.demo.service.UserService;
 
 @RestController
-@CrossOrigin("*"})
+@CrossOrigin("*")
 @RequestMapping("/user")
 	@CrossOrigin("*")
 public class UserController {
