@@ -34,6 +34,18 @@ public class UserController {
 	   
 	   
    }
+	@PostMapping("/getUser")
+   public ResponseEntity<Integer> getUser(@RequestBody User u) {
+	   
+	    
+	     User newuser= user.loginUser(u.email,u.password);
+	     System.out.println(newuser.getUserId());
+	     int userId=newuser.getUserId();
+	     System.out.println(userId);
+	      return ResponseEntity.ok(userId);
+	   
+	   
+  }
    @PostMapping("/register")
    public ResponseEntity<?> register(@RequestBody User u) 
    {
