@@ -24,6 +24,7 @@ import com.example.demo.service.UserService;
 public class UserController {
 	@Autowired
 	UserService user;
+	@CrossOrigin("http://localhost:3000")
    @PostMapping("/login")
     public User login(@RequestBody User u) {
 	   
@@ -33,6 +34,7 @@ public class UserController {
 	   
 	   
    }
+   @CrossOrigin("http://localhost:3000")
    @PostMapping("/register")
    public ResponseEntity<?> register(@RequestBody User u) 
    {
@@ -47,6 +49,7 @@ public class UserController {
 	      
 	     return ResponseEntity.ok(newuser);
    }
+	@CrossOrigin("http://localhost:3000")
    @GetMapping("/results/{id}")
    public List<UserQuiz> quizResults(@PathVariable("id")int id){
 	        try 
@@ -60,10 +63,12 @@ public class UserController {
 				return null;
 			}
 	      }
+	@CrossOrigin("http://localhost:3000")
    @GetMapping("/allUsers")
     public List<User> allUsers(){
 	   return user.allUsers();  
    }
+	@CrossOrigin("http://localhost:3000")
    @PostMapping("/admin")
     public User addAdmin(@RequestBody User u) {
 	   
