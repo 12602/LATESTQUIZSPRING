@@ -23,6 +23,9 @@ import lombok.Setter;
 @Setter
 public class User 
 {
+	public User() {
+		
+	}
 	
 	@Override
 	public String toString() {
