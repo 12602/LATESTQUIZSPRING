@@ -21,6 +21,7 @@ import com.example.demo.service.UserService;
 @RestController
 @CrossOrigin({"http://localhost:3000","https://quizappsrpring.netlify.app/","https://quizappbackend-production-af37.up.railway.app/"})
 @RequestMapping("/user")
+	@CrossOrigin("*")
 public class UserController {
 	@Autowired
 	UserService user;
