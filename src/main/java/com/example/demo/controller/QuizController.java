@@ -24,7 +24,7 @@ import com.example.demo.service.UserService;
 
 @RestController
 @RequestMapping("/quiz")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class QuizController {
 	     @Autowired
 	      QuizService quiz;
