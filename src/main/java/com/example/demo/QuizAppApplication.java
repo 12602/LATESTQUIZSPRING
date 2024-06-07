@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  
 
 @SpringBootApplication
-@CrossOrigin({"https://6626a0e405e8080085d19b05--dashing-wisp-a04d53.netlify.app/","https://quizappbackend-production-af37.up.railway.app/"})
+@CrossOrigin({"http://localhost:3000","https://quizappspringreact.netlify.app/","https://quizappbackend-production-af37.up.railway.app/"})
 public class QuizAppApplication {
 
 	
