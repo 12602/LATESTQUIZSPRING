@@ -24,7 +24,7 @@ import com.example.demo.service.UserService;
 
 @RestController
 @RequestMapping("/quiz")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin({"http://localhost:3000","https://quizappspringreact.netlify.app/","https://quizappbackend-production-af37.up.railway.app/"})
 public class QuizController {
 	     @Autowired
 	      QuizService quiz;
