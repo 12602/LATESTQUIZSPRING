@@ -19,7 +19,7 @@ import com.example.demo.entity.UserQuiz;
 import com.example.demo.service.UserService;
 
 @RestController
-@CrossOrigin({"http://localhost:3000","https://quizappsrpring.netlify.app/","https://quizappbackend-production-af37.up.railway.app/"})
+@CrossOrigin({"http://localhost:3000","https://quizappspringreact.netlify.app/","https://quizappbackend-production-af37.up.railway.app/"})
 @RequestMapping("/user")
 public class UserController {
 	@Autowired
