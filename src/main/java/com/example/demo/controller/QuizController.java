@@ -97,16 +97,23 @@ public class QuizController {
 	 }
 	 @PostMapping("/submitQuiz")
 	  public String submitQuiz(@RequestBody Map<String,Object> req) {
-		 
-		 System.out.println(req	);
-		  int userId=Integer.parseInt(req.get("userId").toString());
-		  int  score=Integer.parseInt(req.get("score").toString());
-		  String quizCat=req.get("category").toString();
-		  	
-		  
-		   
-		 return quiz.submitQuiz(userId,score,quizCat);
-		 
+		   try {
+			   System.out.println(req	);
+				 int userId=Integer.parseInt(req.get("userId").toString());
+				  int  score=Integer.parseInt(req.get("score").toString());
+				  String quizCat=req.get("category").toString();
+				  	
+				  
+				    
+				 String res= quiz.submitQuiz(userId,score,quizCat);
+				 System.out.println(res);
+				 return res;
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Error in uploading quiz");
+			return "Error in submitting quiz";
+		}
+		
 		 
 	 }
 	 @GetMapping("/allQuestions")
